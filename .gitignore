@@ -1,0 +1,16 @@
+.env
+backend/.env
+
+venv/
+backend/venv/
+
+__pycache__/
+*.pyc
+
+node_modules/
+frontend/node_modules/
+
+dist/
+
+support_agent.db
+backend/support_agent.db
