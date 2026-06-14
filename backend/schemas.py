@@ -4,6 +4,7 @@ from pydantic import BaseModel
 class ChatRequest(BaseModel):
     customer_name: str
     question: str
+    rating: int | None = None
 
 
 class TicketCreate(BaseModel):

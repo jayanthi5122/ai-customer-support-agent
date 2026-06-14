@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Text, DateTime
+from sqlalchemy import Column, Integer, String, Text, DateTime, Boolean
 from datetime import datetime
 from database import Base
 
@@ -22,7 +22,8 @@ class Ticket(Base):
     priority = Column(String(50), default="Medium")
     status = Column(String(50), default="Open")
     created_at = Column(DateTime, default=datetime.utcnow)
-    
+    refund_status = Column(String(100), default="Not Required")
+    evidence_uploaded = Column(Boolean, default=False)
 class Document(Base):
     __tablename__ = "documents"
 
